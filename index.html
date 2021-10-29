@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookList</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container py-5">
+        <h1>Add Book</h1>
+        <div id="bookAdded" class="mb-3 bg-success p-2 text-white">
+            Book added!
+        </div>
+        <div>
+            <div class="mb-3">
+                <div class="d-flex justify-content-between">
+                    <label for="bookTitle" class="form-label">Book Title</label>
+                    <div>
+                        <input type="checkbox" class="checkbox" id="chk" />
+                        <label class="label" for="chk">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                            <div class="ball"></div>
+                        </label>
+                    </div>
+                </div>
+                <input type="text" class="form-control" id="bookTitle">
+            </div>
+            <div class="mb-3">
+                <label for="bookAuthor" class="form-label">Author</label>
+                <input type="text" class="form-control" id="bookAuthor">
+            </div>
+            <div class="mb-3">
+                <label for="bookIsbn" class="form-label">ISBN</label>
+                <input type="number" class="form-control" id="bookIsbn">
+            </div>
+            <button class="btn btn-transparent border border-1 w-100" onclick="addBook()">SUBMIT</button>
+        </div>
+        <table class="table mt-5">
+            <thead>
+                <th>Title</th>
+                <th>Author</th>
+                <th>ISBN</th>
+                <th></th>
+            </thead>
+            <tbody id="tablebody">
+            </tbody>
+        </table>
+        <button class="btn btn-transparent border border-1 text-capitalize px-5 ms-auto d-block"
+            onclick="clearAllBooks()">clear all books</button>
+
+    </div>
+
+    
+
+    <script src="index.js"></script>
+</body>
+
+</html>
